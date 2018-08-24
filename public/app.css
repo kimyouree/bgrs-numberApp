@@ -28,6 +28,7 @@ input {
     padding: 4rem 2rem;
     background-color: #CCFBF7;
     box-shadow: 5px 10px 8px #eeeeee;
+    transition: all 4s ease-in-out
 }
 
 .input-group-btn {
@@ -82,4 +83,8 @@ li {
 .fade-appear.fade-appear-active {
     opacity: 1;
     transition: opacity 600ms linear;
+}
+
+.list-container {
+    position: relative
 }

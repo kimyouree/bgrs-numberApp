@@ -6,6 +6,7 @@ const List = props => {
         listOfNumbers = [];
     numbers.map(element => {
         return listOfNumbers.push(
+            // how to make each new list item fade in?
             <ListItem number={element.num} id={element.index} key={element.index} />
         );
     });

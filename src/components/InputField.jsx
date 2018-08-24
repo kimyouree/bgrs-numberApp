@@ -24,9 +24,8 @@ class InputField extends Component {
     }
 
     render() {
-        {
-            /*  prevents entries with non-integer characters   */
-        }
+        /*  prevents entries with non-integer characters   */
+
         return (
             <Row>
                 <form onSubmit={this.handleInput}>

@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import InputField from "./components/InputField.jsx";
 import List from "./components/List.jsx";
-import { CSSTransition } from "react-transition-group";
+import { CSSTransition, Transition } from "react-transition-group";
 
 class App extends Component {
     constructor() {
@@ -48,19 +48,19 @@ class App extends Component {
         return (
             <div className="container">
                 <h3>Number Counter</h3>
-                <div className="container inner">
-                    <p className="sub-heading">Adds a number to the list, no duplicates</p>
-                    <CSSTransition in={fade} appear={true} timeout={600} classNames="fade">
+                <CSSTransition in={fade} appear={true} timeout={600} classNames="fade">
+                    <div className="container inner">
+                        <p className="sub-heading">Adds a number to the list, no duplicates</p>
                         <InputField addNum={this.addNum} />
-                    </CSSTransition>
-                    <CSSTransition in={fade} appear={true} timeout={600} classNames="fade">
-                        <List numbers={numbers} />
-                    </CSSTransition>
 
-                    <p className="last-entered">
-                        Last entered number: {this.state.numbers[this.state.numbers.length - 1].num}
-                    </p>
-                </div>
+                        <List numbers={numbers} />
+
+                        <p className="last-entered">
+                            Last entered number:{" "}
+                            {this.state.numbers[this.state.numbers.length - 1].num}
+                        </p>
+                    </div>
+                </CSSTransition>
             </div>
         );
     }
