@@ -12,7 +12,7 @@
 h3 {
     text-align: center;
     color: #3CAFA6;
-    text-shadow: 2px 2px 6px #DBD7D7
+    text-shadow: 2px 2px 8px #DBD7D7
 }
 
 input {
@@ -27,7 +27,8 @@ input {
     border-radius: 5px;
     padding: 4rem 2rem;
     background-color: #CCFBF7;
-    box-shadow: 5px 10px 8px #eeeeee;
+    /* box-shadow: 5px 10px 8px #eeeeee; */
+    box-shadow: 0 25px 10px -10px rgba(25, 31, 45, 0.30), 0 6px 45px 0 rgba(35, 40, 50, 0.35);
     transition: all 4s ease-in-out
 }
 
