@@ -32,7 +32,7 @@ input {
 
 .input-group-field {
     position: relative;
-    left: 8%;
+    left: 6%;
     margin: 1rem 2rem;
     font-size: 1rem;
     margin: 5% 5%;
@@ -40,7 +40,7 @@ input {
 
 ul {
     margin-bottom: 15%;
-    margin-top: 8%;
+    margin-top: 6%;
     transition: all 0.3s linear;
 }
 
@@ -50,6 +50,24 @@ ul {
     top: 1.5rem;
     left: 12%;
     margin-bottom: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+    .addBtn {
+        left: 23%
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    .addBtn {
+        left: 33%;
+    }
+}
+
+@media only screen and (min-width: 992px) {
+    .addBtn {
+        left: 4%
+    }
 }
 
 li {
