@@ -3,7 +3,6 @@
 }
 
 .container {
-    margin: 0 auto;
     top: 3rem;
     padding: 4rem;
     font-family: Courier New, Courier, monospace
@@ -60,10 +59,9 @@ li {
 }
 
 li.show {
-    /* background-color: blue; */
-    -webkit-animation: fadeIn .3s linear;
+    -webkit-animation: fadeIn .3s ease-in-out;
     /* Safari 4.0 - 8.0 */
-    animation: fadeIn .3s linear;
+    animation: fadeIn .3s ease-in-out;
 }
 
 @keyframes fadeIn {
