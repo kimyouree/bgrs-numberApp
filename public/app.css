@@ -52,9 +52,12 @@ ul {
     margin-bottom: 1.5rem;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 662px) {
     .addBtn {
         left: 23%
+    }
+    .input-group-field {
+        left: 9.5%
     }
 }
 
