@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import InputField from "./components/InputField.jsx";
 import List from "./components/List.jsx";
-import { CSSTransition, Transition } from "react-transition-group";
+import { CSSTransition } from "react-transition-group";
 
 class App extends Component {
     constructor() {
