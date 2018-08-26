@@ -59,6 +59,7 @@ li {
 }
 
 li.show {
+    background-color: #F2FCFA;
     -webkit-animation: fadeIn .3s ease-in-out;
     /* Safari 4.0 - 8.0 */
     animation: fadeIn .3s ease-in-out;
