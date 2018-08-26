@@ -29,18 +29,20 @@ class InputField extends Component {
         return (
             <Row>
                 <form onSubmit={this.handleInput}>
-                    <div className="input-group-btn">
+                    <div className="input-group-field">
                         <Input
+                            className="input"
                             onChange={this.changeHandler}
                             required
                             placeholder="Input..."
                             l={6}
-                            s={12}
+                            s={10}
                             label="Please enter a number"
                             value={this.state.input}
                         />
                     </div>
-                    <Button className="addBtn" waves="light">
+
+                    <Button waves="light" className="addBtn">
                         ADD ME<Icon left>save</Icon>
                     </Button>
                 </form>
