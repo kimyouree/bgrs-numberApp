@@ -5,7 +5,8 @@
 .container {
     top: 3rem;
     padding: .5rem;
-    font-family: Courier New, Courier, monospace
+    font-family: Courier New, Courier, monospace;
+    transition: all .3s linear
 }
 
 h3 {
@@ -27,7 +28,6 @@ input {
     padding: 4rem 2rem;
     background-color: #CCFBF7;
     box-shadow: 0 25px 10px -10px rgba(25, 31, 45, 0.30), 0 6px 45px 0 rgba(35, 40, 50, 0.35);
-    transition: all .5s linear
 }
 
 .input-group-field {
