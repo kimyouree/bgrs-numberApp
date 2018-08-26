@@ -19,6 +19,6 @@ const List = props => {
               );
     });
 
-    return <ul className="fadeIn">{listOfNumbers}</ul>;
+    return <ul>{listOfNumbers}</ul>;
 };
 export default List;

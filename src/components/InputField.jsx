@@ -32,17 +32,15 @@ class InputField extends Component {
                     <div className="input-group-btn">
                         <Input
                             onChange={this.changeHandler}
-                            className="input-group-field"
                             required
                             placeholder="Input..."
                             l={6}
-                            m={12}
                             s={12}
                             label="Please enter a number"
                             value={this.state.input}
                         />
                     </div>
-                    <Button s={12} m={12} className="addBtn" waves="light">
+                    <Button className="addBtn" waves="light">
                         ADD ME<Icon left>save</Icon>
                     </Button>
                 </form>
