@@ -58,6 +58,8 @@ li {
     transition: all 0.6s linear;
 }
 
+/* animate next entry */
+
 li.show {
     background-color: #F2FCFA;
     -webkit-animation: fadeIn .3s ease-in-out;

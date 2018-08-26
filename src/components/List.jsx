@@ -4,7 +4,6 @@ import ListItem from "./ListItem";
 const List = props => {
     const { numbers } = props,
         listOfNumbers = [];
-    // console.log(numbers);
     numbers.map(element => {
         return element.index === numbers.length
             ? listOfNumbers.push(
@@ -17,8 +16,6 @@ const List = props => {
                   />
               )
             : listOfNumbers.push(
-                  // how to make each new list item fade in?
-
                   <ListItem
                       style={{ opacity: 1 }}
                       number={element.num}
@@ -31,4 +28,3 @@ const List = props => {
     return <ul className="fadeIn">{listOfNumbers}</ul>;
 };
 export default List;
-// className={element.index === numbers.length ? "fade-appear" : "fade"}
