@@ -34,10 +34,10 @@ class InputField extends Component {
                             className="input"
                             onChange={this.changeHandler}
                             required
-                            placeholder="Input..."
+                            placeholder="Please enter a number..."
                             l={6}
                             s={10}
-                            label="Please enter a number"
+                            // label="Please enter a number"
                             value={this.state.input}
                         />
                     </div>

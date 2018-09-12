@@ -7,57 +7,54 @@ class App extends Component {
     constructor() {
         super();
         this.state = {
-            numbers: [
-                {
-                    num: 0,
-                    index: 1
-                },
-                {
-                    num: 1,
-                    index: 2
-                }
-            ],
-            fade: true
+            numbers: ["0", "1"],
+            pastEntries: ["0", "1"],
+            fade: true,
+            lastEntered: "1"
         };
         this.addNum = this.addNum.bind(this);
     }
 
     // adds new entry to list
     addNum(text) {
-        const newNumbers = Array.from(this.state.numbers);
-        const numEntry = {
-            num: parseInt(text, 10),
-            index:
-                this.state.numbers.length > 0
-                    ? this.state.numbers[this.state.numbers.length - 1].index + 1
-                    : 0
-        };
+        const { numbers, pastEntries } = this.state;
+        const thisArr = Array.from(this.state.numbers);
+        const pastEntriesCopy = Array.from(this.state.pastEntries);
 
-        // checks for duplicate entries
-        for (let i = 0; i < this.state.numbers.length; i++) {
-            if (this.state.numbers[i].num.toString() === text) {
-                return;
-            }
+        const sorted = text
+            .split("")
+            .sort()
+            .join("");
+
+        const checkPastEntries = pastEntriesCopy.includes(text);
+
+        if (!checkPastEntries) {
+            const newNumbers = thisArr.concat(sorted);
+            const finalPastEntries = pastEntries.concat(text);
+            this.setState({
+                numbers: newNumbers,
+                pastEntries: finalPastEntries,
+                lastEntered: text
+            });
         }
-        newNumbers.push(numEntry);
-        this.setState({ numbers: newNumbers });
     }
 
     render() {
         const { numbers, fade } = this.state;
         return (
             <div className="container">
-                <h3>Number Counter</h3>
+                <h2>Number Counter</h2>
                 <CSSTransition in={fade} appear={true} timeout={600} classNames="fade">
                     <div className="container inner">
-                        <p className="sub-heading">Adds a number to the list, no duplicates</p>
+                        <p className="sub-heading">
+                            Sorts & adds number to the list, no duplicates
+                        </p>
                         <InputField addNum={this.addNum} />
 
                         <List numbers={numbers} />
 
                         <p className="last-entered">
-                            Last entered number:{" "}
-                            {this.state.numbers[this.state.numbers.length - 1].num}
+                            Last entered number: {this.state.lastEntered}
                         </p>
                     </div>
                 </CSSTransition>
