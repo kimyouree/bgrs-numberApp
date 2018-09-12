@@ -17,7 +17,7 @@ class App extends Component {
 
     // adds new entry to list
     addNum(text) {
-        const { numbers, pastEntries } = this.state;
+        const { pastEntries } = this.state;
         const thisArr = Array.from(this.state.numbers);
         const pastEntriesCopy = Array.from(this.state.pastEntries);
 
