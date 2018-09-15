@@ -6,7 +6,7 @@ const List = props => {
 
     const listOfNumbers = numbers.map((element, index) => {
         if (index === numbers.length - 1) {
-            // -1!!!
+            // -1!!! - applies the fade-in effect
             return <ListItem stylish="show" number={element} id={index} key={index} />;
         }
         return <ListItem number={element} id={index} key={index} />;

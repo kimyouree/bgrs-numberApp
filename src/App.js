@@ -19,15 +19,18 @@ class App extends Component {
     addNum(text) {
         const { pastEntries } = this.state;
         const thisArr = Array.from(this.state.numbers);
-        const pastEntriesCopy = Array.from(this.state.pastEntries);
+        const pastEntriesArr = Array.from(this.state.pastEntries);
 
         const sorted = text
             .split("")
             .sort()
             .join("");
-
-        const checkPastEntries = pastEntriesCopy.includes(text);
-
+        // const checkPastEntries = pastEntriesArr.filter(entry => {
+        //    return entry === text; // if true -> ['1'] && if false -> [] == false;
+        //});
+        const checkPastEntries = pastEntriesArr.includes(text);
+        console.log(checkPastEntries);
+        //if (checkPastEntries.length === 1) {
         if (!checkPastEntries) {
             const newNumbers = thisArr.concat(sorted);
             const finalPastEntries = pastEntries.concat(text);
@@ -37,6 +40,15 @@ class App extends Component {
                 lastEntered: text
             });
         }
+
+        // const newNumbers = checkPastEntries.length === 0 ? thisArr.concat(sorted) : numbers;
+        // const finalPastEntries =
+        //    checkPastEntries.length === 0 ? pastEntries.concat(text) : pastEntriesArr;
+        //this.setState({
+        //    numbers: newNumbers,
+        //    pastEntries: finalPastEntries,
+        //    lastEntered: text
+        //});
     }
 
     render() {
